@@ -4,7 +4,7 @@ WrappyDatabase
 Python module with universal interface for PostgreSQL and MySQL.
 
 ```python
-from Database import Database
+from WrappyDatabase import Database
 
 
 # DSN

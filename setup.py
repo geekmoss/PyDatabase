@@ -7,13 +7,14 @@ with open("README.md", 'r') as f:
 
 setup(
     name='WrappyDatabase',
-    version='1.0.1',
+    version='1.0.2',
     packages=['WrappyDatabase'],
     url='https://github.com/geekmoss/WrappyDatabase',
-    license='',
+    license='MIT',
     author='Jakub Janeček',
     author_email='Jakub.Janecek@firma.seznam.cz',
     description='Python module with universal interface for PostgreSQL and MySQL.',
     long_description=long_description,
+    long_description_content_type="text/markdown",
     install_requires=['psycopg2-binary', 'pymysql']
 )
