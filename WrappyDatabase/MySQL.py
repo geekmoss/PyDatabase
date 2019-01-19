@@ -79,6 +79,9 @@ class MySQL:
 
     def mogrify(self, query, params):
         return self._conn.cursor().mogrify(query, params)
+
+    def inserted_id(self):
+        return self._conn.insert_id()
     pass
 
 

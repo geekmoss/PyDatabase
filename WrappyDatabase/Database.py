@@ -126,6 +126,17 @@ class Database:
 
     def mogrify(self, query, params) -> str:
         return self._driver.mogrify(query=query, params=params)
+
+    def inserted_id(self):
+        if isinstance(self._driver, PostgreSQL):
+            raise DatabaseException("PostgreSQL does not have .insert_id(), use ` RETURNING id;` "
+                                    "on end of insert query.")
+        elif isinstance(self._driver, MySQL):
+            return self._driver.inserted_id()
+        else:
+            return None
+        pass
+
     pass
 
 
