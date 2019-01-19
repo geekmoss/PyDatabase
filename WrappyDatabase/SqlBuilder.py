@@ -130,10 +130,7 @@ class SqlBuilder:
 
         # GROUP BY
         if self._group_by is not None:
-            query += " GROUP BY"
-            for group in self._group_by:
-                query += f" {group}, "
-                pass
+            query += " GROUP BY " + ", ".join(self._group_by)
             pass
 
         # ORDER BY
